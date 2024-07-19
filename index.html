@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mi Proyecto AR</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="https://rawcdn.githack.com/AR-js-org/AR.js/3.3.2/aframe/build/aframe-ar-nft.js"></script>
+  </head>
+  <body style="margin: 0; overflow: hidden;">
+    <a-scene embedded arjs='sourceType: webcam;'>
+      <!-- Agregar una luz ambiental y una luz direccional -->
+      <a-light type="ambient" color="#ffffff"></a-light>
+      <a-light type="directional" position="0 1 0" intensity="1"></a-light>
+      
+      <a-marker type='pattern' url='markers/Target.patt'>
+        <!-- Añadir las 13 capas de imágenes -->
+        <a-image src="imagenes/1_Amarillo.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-image src ="imagenes/2_Rojo.png" position= "0 1 0" rotation="-90 0 0" scale ="1 1 1" ></a-image>
+        <a-image src="imagenes/3_Grises.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-image src ="imagenes/4_Azul.png" position= "0 1 0" rotation=" -90 0 0" scale ="1 1 1" ></a-image>
+        <a-image src="imagenes/5_AzulRey.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-image src ="imagenes/6_AzulCielo.png" position= "0 1 0" rotation="-90 0 0" scale ="1 1 1" ></a-image>
+        <a-image src="imagenes/7_Grises.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-image src="imagenes/1_Amarillo.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-image src="imagenes/10_Azules.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-image src ="imagenes/11_Azules.png" position= "0 1 0" rotation="-90 0 0" scale ="1 1 1" ></a-image>
+        <a-image src="imagenes/13_Rojos.png" position="0 1 0" rotation="-90 0 0" scale="1 1 1"></a-image>
+        <a-sound src="url(sounds/Fondo.mp3)" autoplay="true"></a-sound>
+      </a-marker>
+      
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
